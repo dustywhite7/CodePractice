@@ -1,0 +1,7 @@
+*.bin
+/DogOrCat/test/*
+/DogOrCat/train/*
+/DogOrCat/validate/*
+/DogOrCat/test_data.csv
+/DogOrCat/train_data.csv
+/DogOrCat/validate.csv
