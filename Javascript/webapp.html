@@ -7,6 +7,41 @@
 <body>
   This is a website<br>
   <button onclick="alert('Boom!');">DO NOT PRESS</button>
+
+  <p>The <img src="img/cat.png" alt="Cat"> in the
+  <img src="img/hat.png" alt="Hat">.</p>
+
+<p><button onclick="replaceImages()">Replace</button></p>
+
+<script>
+  function replaceImages() {
+    var images = document.body.getElementsByTagName("img");
+    for (var i = images.length - 1; i >= 0; i--) {
+      var image = images[i];
+      if (image.alt) {
+        var text = document.createTextNode(image.alt);
+        image.parentNode.replaceChild(text, image);
+      }
+    }
+  }
+</script>
+
+<p style="text-align: center">
+  <img src="/home/dusty/Documents/applications/Marp/Marp.png" style="position: relative">
+</p>
+<script>
+  var cat = document.querySelector("img");
+  var angle = 0, lastTime = null;
+  function animate(time) {
+    if (lastTime != null)
+      angle += (time - lastTime) * 0.1;
+    lastTime = time;
+    cat.style.top = (Math.sin(angle) * 20) + "px";
+    cat.style.left = (Math.cos(angle) * 200) + "px";
+    requestAnimationFrame(animate);
+  }
+  requestAnimationFrame(animate);
+</script>
 </body>
 
 </html>

@@ -5,3 +5,5 @@
 /DogOrCat/test_data.csv
 /DogOrCat/train_data.csv
 /DogOrCat/validate.csv
+/Theano/mnist/*
+/Theano/*.csv
